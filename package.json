@@ -1,15 +1,15 @@
 {
-	"name": "grunt-nuget-pack",
-	"version": "0.0.6",
+	"name": "@tigre/grunt-nuget-pack",
+	"version": "0.0.7",
 	"description": "Grunt task for creating nuget packages without using nuget.exe.",
-	"author": "Moxiecode Systems AB <info@moxiecode.com>",
+	"author": "Moxiecode Systems AB <info@moxiecode.com>, Cam Birch",
 	"license": "MIT",
 	"repository": {
 		"type" : "git",
-		"url" : "https://github.com/spocke/grunt-nuget-pack.git"
+		"url" : "https://github.com/cambirch/grunt-nuget-pack.git"
 	},
 	"bugs": {
-		"url" : "https://github.com/spocke/grunt-nuget-pack/issues"
+		"url" : "https://github.com/cambirch/grunt-nuget-pack/issues"
 	},
 	"keywords": [
 		"gruntplugin",
