@@ -112,6 +112,12 @@ Type: `string`
 
 A space-delimited list of tags and keywords that describe the package. This information is used to help make sure users can find the package using searches in the Add Package Reference dialog box or filtering in the Package Manager Console window.
 
+#### noContent
+
+Type: `boolean`
+
+A Boolean values that specifies if the dest folder will be joined with `/content` while building dynamic dest files. This allows compatibility with Octopus Deploy nuget packages.
+
 #### excludes
 
 Type: `array`

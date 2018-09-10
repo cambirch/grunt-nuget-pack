@@ -3,7 +3,8 @@ var path = require("path");
 
 module.exports = function(grunt) {
 	grunt.registerMultiTask("nugetpack", "Creates nupkg packages.", function() {
-		var done = this.async(), target = grunt.config([this.name, this.target]);
+		var done = this.async(),
+			target = grunt.config([this.name, this.target]);
 		var packageFilePath, baseDir, package;
 
 		if (typeof target.options != "object") {
@@ -31,7 +32,12 @@ module.exports = function(grunt) {
 						grunt.fail.fatal("Path for file: " + src + " isn't within the baseDir: " + baseDir);
 					}
 
-					dest = path.join("content", path.relative(baseDir, src));
+					// For compatibility with Octopus Deploy
+					if (!!target.options.noContent) {
+						dest = path.relative(baseDir, src);
+					} else {
+						dest = path.join("content", path.relative(baseDir, src));
+					}
 				}
 
 				try {
